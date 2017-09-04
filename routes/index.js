@@ -12,7 +12,7 @@ var wx = require('../config/wechat');
 // }
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render("index");
+  res.render("index",{title: '韦远的个人网站'});
   // api.getAccessToken(req.query.code, function (err, result) {
   //   if (err != null) {
   //     res.redirect('/wechat');
