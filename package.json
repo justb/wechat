@@ -1,5 +1,5 @@
 {
-  "name": "proxy",
+  "name": "wechat",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,7 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "http-proxy": "^1.16.2",
-    "jade": "~1.11.0",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2",
-    "wechat-oauth": "^1.2.1"
+    "serve-favicon": "~2.4.2"
   }
 }
