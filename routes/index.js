@@ -8,6 +8,7 @@ router.get('/', function (req, res, next) {
   var OAuth = require('wechat-oauth');
   var client = new OAuth('wx0d215ec078c80bc0', 'a6ee3f5b61b3ee85307840f5853d2785');
   var url = client.getAuthorizeURL('http://wechat.kim1.kim/home', 'state', 'snsapi_userinfo');
+  console.log(url)
   res.redirect(url)
 
 
