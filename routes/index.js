@@ -16,7 +16,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/home', function (req, res, next) {
-  console.log(result)
   client.getAccessToken(req.query.code, function (err, result) {
     var accessToken = result.data.access_token;
     var openid = result.data.openid;
