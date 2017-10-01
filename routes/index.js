@@ -17,17 +17,18 @@ router.get('/', function (req, res, next) {
 
 router.get('/home', function (req, res, next) {
   console.log(result)
-  client.getAccessToken('code', function (err, result) {
+  client.getAccessToken(req.query.code, function (err, result) {
     var accessToken = result.data.access_token;
     var openid = result.data.openid;
-  });
-  client.getUser(openid, function (err, result) {
-    var userInfo = result;
-    console.log(result)
-    res.render('index', {
-      title: 'KT足球'
+    client.getUser(openid, function (err, result) {
+      var userInfo = result;
+      console.log(result)
+      res.render('index', {
+        title: 'KT足球'
+      });
     });
   });
+
 })
 
 module.exports = router;
