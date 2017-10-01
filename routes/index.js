@@ -18,11 +18,12 @@ router.get('/', function (req, res, next) {
 
 router.get('/home', function (req, res, next) {
   client.getAccessToken(req.query.code, function (err, result) {
+    console.log(result)
     var accessToken = result.data.access_token;
     var openid = result.data.openid;
     client.getUser(openid, function (err, result) {
       var userInfo = result;
-      console.log(result)
+      
       res.send(result);
     });
   });
