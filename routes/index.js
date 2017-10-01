@@ -23,9 +23,7 @@ router.get('/home', function (req, res, next) {
     client.getUser(openid, function (err, result) {
       var userInfo = result;
       console.log(result)
-      res.render('index', {
-        title: 'KT足球'
-      });
+      res.send(result);
     });
   });
 
